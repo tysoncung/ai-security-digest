@@ -1,3 +1,15 @@
 {
-  "type": "module"
+  "type": "module",
+  "name": "ai-security-digest",
+  "version": "1.0.0",
+  "description": "AI-powered weekly software supply chain security intelligence briefs",
+  "scripts": {
+    "fetch": "node scripts/fetch-cves.js",
+    "analyze": "node scripts/analyze-cves.js",
+    "build": "node scripts/build-site.js",
+    "update": "npm run fetch && npm run analyze && npm run build"
+  },
+  "dependencies": {
+    "@azure/openai": "2.0.0"
+  }
 }
